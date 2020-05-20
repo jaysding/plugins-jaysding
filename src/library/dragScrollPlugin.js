@@ -13,7 +13,6 @@ export class DragScroller {
     constructor($el, uiDom) {
         this.container = '';
         this.childBody = '';
-        this.reverse = $el.hasOwnProperty('reverse') ? $el.reverse : false;
         this.uiDom = uiDom;
         this.downX = 0;
         this.moveX = 0;
@@ -26,6 +25,7 @@ export class DragScroller {
         this.moveFun = (e) => this.handleMoveFun(e);
         this.upFun = (e) => this.handleUpFun(e);
         this.domInit($el);
+        this.reverse = $el && $el.hasOwnProperty('reverse') ? $el.reverse : false;
         this.offsetLt = this.getAbsoluteLeft(this.container);
     };
 
