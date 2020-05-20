@@ -1,7 +1,7 @@
 {
   "name": "drag-scroll-plugin",
   "title": "drag-scroll-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Plug-ins that drag and drop the scroll container support native js and vue",
   "main": "dist/main.js",
   "scripts": {

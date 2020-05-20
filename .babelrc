@@ -3,7 +3,7 @@
 		[
 			"@babel/preset-env", {
 				"targets": {
-                    "ie": "8"
+                    "ie": "10"
                 },
                 "corejs": 3,
 				"useBuiltIns": "usage"
@@ -17,6 +17,6 @@
         },
         "helpers": true,
         "regenerator": true,
-        "useESModules": false
+        "useESModules": true
 	}]]
 }
