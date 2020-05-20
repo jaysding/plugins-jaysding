@@ -13,13 +13,14 @@ export class DragScroller {
     constructor($el, uiDom) {
         this.container = '';
         this.childBody = '';
+        this.reverse = $el.hasOwnProperty('reverse') ? $el.reverse : false;
         this.uiDom = uiDom;
         this.downX = 0;
         this.moveX = 0;
         this.disX = 0;
         this.isMouse = false;
         this.scrollNow = 0;
-        this.downFun = (e) => this.handleDownFun(e); // 保存this指向
+        this.downFun = (e) => this.handleDownFun(e);
         this.dragFun = (e) => this.handleDragFun(e);
         this.scrollFun = (e) => this.handleScrollFun(e);
         this.moveFun = (e) => this.handleMoveFun(e);
@@ -81,7 +82,7 @@ export class DragScroller {
         ev.stopPropagation();
         this.moveX = ev.pageX - this.offsetLt; // move时的相对坐标
         this.disX = this.moveX - this.downX;
-        this.container.scrollLeft = this.scrollNow - this.disX;
+        this.container.scrollLeft = this.reverse ? this.scrollNow + this.disX : this.scrollNow - this.disX;
     };
 
     handleUpFun(eu) {

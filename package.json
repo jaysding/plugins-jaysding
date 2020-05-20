@@ -5,9 +5,8 @@
   "description": "Plug-ins that drag and drop the scroll container support native js and vue",
   "main": "dist/main.js",
   "scripts": {
-    "build": "webpack --display-error-details --config webpack.config.js",
-    "start": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "dev": "webpack-dev-server"
   },
   "files": [
     "dist"
@@ -28,17 +27,5 @@
   "bugs": {
     "url": "https://github.com/jaysding/plugins-jaysding/issues"
   },
-  "homepage": "https://github.com/jaysding/plugins-jaysding#readme",
-  "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-transform-runtime": "^7.9.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "html-webpack-plugin": "^4.2.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
-  },
-  "dependencies": {
-    "@babel/runtime": "^7.9.2"
-  }
+  "homepage": "https://github.com/jaysding/plugins-jaysding#readme"
 }
