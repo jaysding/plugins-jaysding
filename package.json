@@ -2,12 +2,8 @@
   "name": "drag-scroll-plugin",
   "title": "drag-scroll-plugin",
   "version": "1.1.0",
-  "description": "Plug-ins that drag and drop the scroll container support native js and vue",
+  "description": "Plugins that drag and drop the scroll container support native js and vue",
   "main": "dist/main.js",
-  "scripts": {
-    "build": "webpack",
-    "dev": "webpack-dev-server"
-  },
   "files": [
     "dist"
   ],
@@ -27,9 +23,5 @@
   "bugs": {
     "url": "https://github.com/jaysding/plugins-jaysding/issues"
   },
-  "homepage": "https://github.com/jaysding/plugins-jaysding#readme",
-  "devDependencies": {
-  },
-  "dependencies": {
-  }
+  "homepage": "https://github.com/jaysding/plugins-jaysding#readme"
 }
