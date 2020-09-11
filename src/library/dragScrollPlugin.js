@@ -37,7 +37,7 @@ export class DragScroller {
             } else if (~this.uiDom.className.indexOf('ivu-table')) {
                 this.container = this.uiDom.children[0].children[1];
                 this.childBody = this.uiDom.children[0].children[1].children[0];
-            } else if (~this.uiDom.className.indexOf('uiDom-table')) {
+            } else if (~this.uiDom.className.indexOf('el-table')) {
                 this.container = this.uiDom.children[2];
                 this.childBody = this.uiDom.children[2].children[0];
             } else {
@@ -105,15 +105,9 @@ export class DragScroller {
 }
 
 export const dragPluginVue = {
-    install: function(Vue, options) {
+    install: function(Vue) {
         Vue.directive('drag', {
-            bind($el, binding) {
-                // new DragScroller(binding.value, $el).bindEvent();
-            },
-            componentUpdated($el, binding) {
-                // new DragScroller(binding.value, $el).bindEvent();
-            },
-            update($el, binding, vnode, oldVnode) {
+            inserted($el, binding) {
                 new DragScroller(binding.value, $el).bindEvent();
             }
         });
